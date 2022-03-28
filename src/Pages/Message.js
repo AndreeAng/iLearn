@@ -1,7 +1,10 @@
 import React from "react";
+import Mailer from "../components/Mailer";
 
 function Message(){
-    return <div> THIS IS THE MESSAGE PAGE </div>;
-}
+    return (
+        <Mailer />
+    );
+};
 
 export default Message;
