@@ -9,52 +9,54 @@ import Microsoft from './Pages/Microsoft';
 import Video from './Pages/Video';
 import logo from "./img/logo.png"
 
+
+const ColoredLine = ({ color }) => (
+  <hr
+      style={{
+          color: color,
+          backgroundColor: color,
+          height: 1
+      }}
+  />
+);
+
 function App() {
   return (
-  <Router>
-    <nav style={styles.navbar}>
-    <img src={logo} alt="My logo" style={styles.logo}/>
-      <Link to="/"><div style={styles.box}>Home</div></Link>
-      <Link to="/archive"><div style={styles.box}>Archive </div></Link>
-      <Link to="/learning"><div style={styles.box}>Learning</div></Link>
-      <Link to="/login"><div style={styles.box}>Login</div></Link>
-      <Link to="/message"><div style={styles.box}>Message</div> </Link>
-      <Link to="/microsoft"><div style={styles.box}>Microsoft</div></Link>
-      <Link to="/video"><div style={styles.box}>Video</div></Link>
-    </nav>
+    <div className='navbar'>
+      <div className='leftSide'>
+        <Router>
+            <nav>   
+                <div className='links'>
+                  <img src={logo} alt="My logo"/>
+                  <Link to="/">Home</Link>
+                  <Link to="/archive">Archive</Link>
+                  <Link to="/learning">Learning</Link>
+                  <Link to="/login">Login</Link>
+                  <Link to="/message">Message</Link>
+                  <Link to="/microsoft">Microsoft</Link>
+                  <Link to="/video">Video</Link>
+                  {/*<ColoredLine color= "black" /> */}
+                </div>
+            </nav>
+
+            <Routes>
+                <Route path ="/" element={<Home />} />;
+                <Route path ="/archive" element={<Archive />} />;
+                <Route path ="/learning" element={<Learning />} />;
+                <Route path ="/login" element={<Login />} />;
+                <Route path ="/message" element={<Message/>} />;
+                <Route path ="/microsoft" element={<Microsoft />} />;
+                <Route path ="/video" element={<Video />} />;
+            </Routes>
+        </Router>
+      </div>
+
+      <div className='rightSide'>
+      </div>
+      
+    </div>
     
-    <Routes>
-      <Route path ="/" element={<Home />} />;
-      <Route path ="/archive" element={<Archive />} />;
-      <Route path ="/learning" element={<Learning />} />;
-      <Route path ="/login" element={<Login />} />;
-      <Route path ="/message" element={<Message/>} />;
-      <Route path ="/microsoft" element={<Microsoft />} />;
-      <Route path ="/video" element={<Video />} />;
-    </Routes>
-  </Router>
   );
 }
-const styles ={
-  navbar: {
-    backgroundColor: "white",
-    height: 100,
-  },
-  logo: {
-    width: 200,
-    height: 100,
-    marginLeft: 20,
-    
-  },
-  box: {
-    display: "inline-block",
-    textdecoration: "none",
-    fontSize: 20,
-    width: 100,
-    marginLeft: 40,
-    paddingTop: 80,
-    textAlign: "center",
-    textAlignVertical: 'center',
-  }
-};
+
 export default App;
