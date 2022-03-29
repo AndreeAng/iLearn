@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import image from "../img/backgi.jpeg";
-//import img from "../img/vid.png"
+import img from "../img/vid.png"
 import { Link } from "react-router-dom";
 
 class Home extends Component {
@@ -28,7 +28,7 @@ const styles ={
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100vw',
-        height: '100vh',
+        height: '87vh',
     },
     button: {
         border: 4,
@@ -43,11 +43,11 @@ const styles ={
         display: "inline-block",
         borderRadius: 20,
         borderColor: "black",
-        marginTop: "9%",
+        marginTop: "5%",
         marginLeft: "9%"
     },
     vid: {
-        //backgroundImage: `url(${img})`,
+        backgroundImage: `url(${img})`,
     },
     
     

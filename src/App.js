@@ -7,18 +7,20 @@ import Login from './Pages/Login';
 import Message from './Pages/Message';
 import Microsoft from './Pages/Microsoft';
 import Video from './Pages/Video';
+import logo from "./img/logo.png"
 
 function App() {
   return (
   <Router>
-    <nav>
-      <Link to="/"> Home </Link>
-      <Link to="/archive"> Archive </Link>
-      <Link to="/learning"> Learning </Link>
-      <Link to="/login"> Login </Link>
-      <Link to="/message"> Message </Link>
-      <Link to="/microsoft"> Microsoft </Link>
-      <Link to="/video"> Video </Link>
+    <nav style={styles.navbar}>
+    <img src={logo} alt="My logo" style={styles.logo}/>
+      <Link to="/"><div style={styles.box}>Home</div></Link>
+      <Link to="/archive"><div style={styles.box}>Archive </div></Link>
+      <Link to="/learning"><div style={styles.box}>Learning</div></Link>
+      <Link to="/login"><div style={styles.box}>Login</div></Link>
+      <Link to="/message"><div style={styles.box}>Message</div> </Link>
+      <Link to="/microsoft"><div style={styles.box}>Microsoft</div></Link>
+      <Link to="/video"><div style={styles.box}>Video</div></Link>
     </nav>
     
     <Routes>
@@ -33,5 +35,27 @@ function App() {
   </Router>
   );
 }
-
+const styles ={
+  navbar: {
+    backgroundColor: "white",
+    BorderBottom: 3,
+    height: 100,
+  },
+  logo: {
+    width: 200,
+    height: 100,
+    marginLeft: 20,
+    
+  },
+  box: {
+    display: "inline-block",
+    paddingTop: 80,
+    textdecoration: "none",
+    fontSize: 20,
+    width: 100,
+    marginLeft: 20,
+    textAlign: "center",
+    justifyContent: 'center',
+  }
+};
 export default App;
