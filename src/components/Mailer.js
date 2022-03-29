@@ -1,4 +1,5 @@
 import emailjs from 'emailjs-com';
+import React, { Component } from "react";
 
 const Mailer = () => {
     function sendEmail(e){
@@ -14,39 +15,42 @@ const Mailer = () => {
             }).catch(err=> console.log(err));
     }
     return(
-        <div className="container border"
-            style ={{marginTop: '10%',
-            width: '30%',
-            backgroundImage: `url('https://heroic.com/wp-content/uploads/HEROIC-Email-Security-Background.jpg')`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-        }}>
-            <h1 style={{marginTop: '20%'}}>Email Sender</h1>
-            <form 
+        <div
+            className='background'
+            style={{backgroundColor: "gray",
+            height: '87vh'
+        }}
+         >
+            <h1 className='Email'
+             style = {{margin: '3% 16% 1% 45%',
+             color: 'white'}}>Email </h1>
+
+            <h1 className='Message row'
+             style = {{margin: '3% 16% 1% 10%',
+             color: 'white'}}> New Message </h1>
+        
+             <form 
                 className='row' 
-                style={{margin: "10% 20% 15% 25%"}}
+                style={{margin: "1% 10% 10% 10%", color: 'White'}}
                 onSubmit = {sendEmail}
                 >
-
-                <label>Name</label>
-                <input type='text' name= 'name' className='form-control'/>
-
-                <label>Email</label>
+                <label>To:</label>
                 <input type='email' name= 'user_email' className='form-control'/>
 
+                <label>Subject</label>
+                <input type='text' name= 'subject' className='form-control'/>
+
                 <label>Message</label>
-                <textarea name= 'message' rows='4' className='form-control'/>
+                <textarea name= 'message' rows='8' className='form-control'/>
+
                 <input type='submit' 
                 value='Send' 
                 className='form-control btn-primary'
-                style={{marginTop: '20%'}}
+                style={{marginTop: '2%'}}
                 />
             </form>
         </div>
-
-
-
     );
-};
 
+    }
 export default Mailer;
