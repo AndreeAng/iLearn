@@ -47,8 +47,6 @@ const styles ={
         borderColor: "black",
         marginTop: "5%",
         marginLeft: "9%"
-    },
-    
-    
+    }, 
 };
 export default Home;
