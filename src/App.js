@@ -38,7 +38,6 @@ function App() {
 const styles ={
   navbar: {
     backgroundColor: "white",
-    BorderBottom: 3,
     height: 100,
   },
   logo: {
@@ -49,13 +48,13 @@ const styles ={
   },
   box: {
     display: "inline-block",
-    paddingTop: 80,
     textdecoration: "none",
     fontSize: 20,
     width: 100,
-    marginLeft: 20,
+    marginLeft: 40,
+    paddingTop: 80,
     textAlign: "center",
-    justifyContent: 'center',
+    textAlignVertical: 'center',
   }
 };
 export default App;

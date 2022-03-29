@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import image from "../img/backgi.jpeg";
-import img from "../img/vid.png"
+import img from "../img/video.png";
+import img1 from "../img/mail.png";
+import img2 from "../img/microsoft.png";
+import img3 from "../img/archive.png";
+import img4 from "../img/online.png";
 import { Link } from "react-router-dom";
 
 class Home extends Component {
@@ -8,13 +12,13 @@ class Home extends Component {
         return (
             <div style={styles.container}>
                 <div>
-                    <Link to="/Video"><div style={styles.button}><div style={styles.vid}></div></div></Link>
-                    <Link to="/Message"><div style={styles.button}></div></Link>
-                    <Link to="/Microsoft"><div style={styles.button}></div></Link>
+                    <Link to="/Video"><img src={img} style={styles.button}/></Link>
+                    <Link to="/Message"><img src={img1} style={styles.button}/></Link>
+                    <Link to="/Microsoft"><img src={img2} style={styles.button}/></Link>
                 </div>
                 <div>
-                    <Link to="/Archive"><div style={styles.button}></div></Link>
-                    <Link to="/Learning"><div style={styles.button}></div></Link>
+                    <Link to="/Archive"><img src={img3} style={styles.button}/></Link>
+                    <Link to="/Learning"><img src={img4} style={styles.button}/></Link>
                 </div>
             </div>
         );
@@ -33,10 +37,8 @@ const styles ={
     button: {
         border: 4,
         borderColor:"black",
-        backgroundColor: "silver",
+        backgroundColor: "white",
         color: "black",
-        paddingTop: "7%",
-        paddingBottom: "7%",
         width: 300,
         textalign: "center", 
         textdecoration: "none",
@@ -45,9 +47,6 @@ const styles ={
         borderColor: "black",
         marginTop: "5%",
         marginLeft: "9%"
-    },
-    vid: {
-        backgroundImage: `url(${img})`,
     },
     
     
