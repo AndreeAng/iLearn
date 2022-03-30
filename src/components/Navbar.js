@@ -23,20 +23,20 @@ function Navbar(){
     return    <div className='navbar'>
     <div className='leftSide'>
       <Router>
-          <nav>   
+          <nav style={styles.nav}>   
               <div className='links'>
-                <Link to="/home"><img src={logo} alt="My logo"/></Link>
-                <Link to="/archive">Archive</Link>
-                <Link to="/learning">Learning</Link>
-                <Link to="/message">Message</Link>
-                <Link to="/microsoft">Microsoft</Link>
-                <Link to="/video">Video</Link>
+                <Link to="/home"><img src={logo} alt="My logo" style={styles.logo}/></Link>
+                <Link to="/archive" style={styles.logo}>Archive</Link>
+                <Link to="/learning" style={styles.logo}>Learning</Link>
+                <Link to="/message" style={styles.logo}>Message</Link>
+                <Link to="/microsoft" style={styles.logo}>Microsoft</Link>
+                <Link to="/video" style={styles.logo}>Video</Link>
                 {/*<ColoredLine color= "black" /> */}
               </div>
           </nav>
 
           <Routes>
-              <Route path ="/" element={<Login />} />;
+              <Route path ="/" element={<Login />}/>;
               <Route path ="/home" element={<Home />} />;
               <Route path ="/archive" element={<Archive />} />;
               <Route path ="/learning" element={<Learning />} />;
@@ -52,5 +52,14 @@ function Navbar(){
     
   </div>
 }
-
+const styles ={
+  logo: {
+    height: 100,
+    display: "inline-block",
+  },
+  nav: {
+    height: 80,
+    display: "inline-block",
+  },
+};
 export default Navbar;
