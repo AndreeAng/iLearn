@@ -38,7 +38,7 @@
 }
 
 .navbar .leftSide {
-  flex: 50%;
+  flex: 70%;
   justify-content: center;
   align-items: center;
 }
@@ -55,7 +55,7 @@
 }
 
 .navbar .rightSide {
-  flex: 50%;
+  flex: 30%;
 }
 
 @keyframes App-logo-spin {

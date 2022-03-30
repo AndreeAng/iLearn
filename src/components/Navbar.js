@@ -26,7 +26,6 @@ function Navbar(){
           <nav>   
               <div className='links'>
                 <Link to="/home"><img src={logo} alt="My logo"/></Link>
-                <Link to="/home">Home</Link>
                 <Link to="/archive">Archive</Link>
                 <Link to="/learning">Learning</Link>
                 <Link to="/message">Message</Link>
@@ -37,10 +36,10 @@ function Navbar(){
           </nav>
 
           <Routes>
+              <Route path ="/" element={<Login />} />;
               <Route path ="/home" element={<Home />} />;
               <Route path ="/archive" element={<Archive />} />;
               <Route path ="/learning" element={<Learning />} />;
-              <Route path ="/" element={<Login />} />;
               <Route path ="/message" element={<Message/>} />;
               <Route path ="/microsoft" element={<Microsoft />} />;
               <Route path ="/video" element={<Video />} />;
