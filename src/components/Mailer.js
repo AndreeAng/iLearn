@@ -16,31 +16,37 @@ const Mailer = () => {
     }
     return(
         <div
-            className='background'
-            style={{backgroundColor: "gray",
-            height: '87vh'
+            className='row'
+            style={{backgroundColor: "gray", 
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            width: '100vw',
+            height: '100vh',
+
         }}
          >
             <h1 className='Email'
-             style = {{margin: '3% 16% 1% 45%',
-             color: 'white'}}>Email </h1>
+             style = {{margin: '1% 16% 1% 45%',
+             color: 'white'}}>Email</h1>
+            
+            <h1 className='Message'
+             style = {{margin: '1% 16% 1% 5%',
+             color: 'white'}}>
+             New Message </h1>
 
-            <h1 className='Message row'
-             style = {{margin: '3% 16% 1% 10%',
-             color: 'white'}}> New Message </h1>
-        
              <form 
                 className='row' 
-                style={{margin: "1% 10% 10% 10%", color: 'White'}}
+                style={{margin: "3% 10% 10% -29%", color: 'White'}}
                 onSubmit = {sendEmail}
                 >
                 <label>To:</label>
                 <input type='email' name= 'user_email' className='form-control'/>
 
-                <label>Subject</label>
+                <label>Subject:</label>
                 <input type='text' name= 'subject' className='form-control'/>
 
-                <label>Message</label>
+                <label>Message:</label>
                 <textarea name= 'message' rows='8' className='form-control'/>
 
                 <input type='submit' 

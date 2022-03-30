@@ -1,16 +1,11 @@
-import React, { useEffect } from "react";
+import React from 'react';
+import { ExternalLink } from 'react-external-link';
 
-function External() {
-
-  useEffect(() => {
-    window.location.href = "https://bulletin.marquette.edu/previousbulletins/2019-20/undergrad/helenwayklinglercollegeofartsandsciences/computerscience/#majortext";
-  }, []);
-
-  return (
-    <div>
-      <h2>External</h2>
-    </div>
-  );
-}
+const External = () => (
+  <div>
+    <h1> TROLL </h1>
+    <ExternalLink href="https://www.npmjs.com/package/react-external-link" />
+  </div>
+);
 
 export default External;

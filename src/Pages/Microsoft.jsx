@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import image from "../img/backgi.jpeg";
-import { Link } from "react-router-dom";
+import imgage1 from "../img/excel.jpg";
+import imgage2 from "../img/word.jpg";
+
+
 
 
 class Microsoft extends Component {
@@ -8,13 +10,13 @@ class Microsoft extends Component {
             return (
                 <div style={styles.container}>
                     <div>
-                        <Link to=""><div style={styles.button}><div style={styles.vid}></div></div></Link>
-                        <Link to=""><div style={styles.button}></div></Link>
-                        <Link to=""><div style={styles.button}></div></Link>
+                        <a href = "https://www.office.com/launch/word?ui=en-US&rs=US&auth=1"><img src={imgage2} style={styles.button}/></a>
+                        <a href="https://www.office.com/launch/excel?ui=en-US&rs=US&auth=1"><img src={imgage1} style={styles.button}/></a>
+                        <a href="https://www.office.com/launch/powerpoint?ui=en-US&rs=US&auth=1"><img src={imgage1} style={styles.button}/></a>
                     </div>
                     <div>
-                        <Link to=""><div style={styles.button}></div></Link>
-                        <Link to=""><div style={styles.button}></div></Link>
+                        <a href="https://onedrive.live.com/edit.aspx?resid=A0BA8893A1DC55B9!1025&cid=a0ba8893a1dc55b9"><img src={imgage1} style={styles.button}/></a>
+                        <a href="https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school//?ctx=teamsGrid"><img src={imgage1} style={styles.button}/></a>
                     </div>
                 </div>
             );
