@@ -1,5 +1,6 @@
 import React from 'react'
 import { useRef, useState, useEffect } from 'react';
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
 const Login = () => {
     const userRef = useRef();
@@ -34,7 +35,7 @@ const Login = () => {
                 <h1>You are logged in!</h1>
                 <br />
                 <p>
-                    <a href='#'>Go to Home</a>
+                    <Link to="/">Home</Link>
                 </p>
             </section>
         ) : (
@@ -63,7 +64,7 @@ const Login = () => {
                 value={pwd}
                 required
             />
-            <button>Sign In</button>
+            <button>Log In</button>
         </form>
         <p>
             Need an Account?<br />
