@@ -9,12 +9,10 @@ class Microsoft extends Component {
         render() { 
             return (
                 <div style={styles.container}>
-                    <div>
+                    <div style={styles.section}>
                         <a href = "https://www.office.com/launch/word?ui=en-US&rs=US&auth=1" target="_blank"><img src={img2} style={styles.button}/></a>
                         <a href="https://www.office.com/launch/excel?ui=en-US&rs=US&auth=1" target="_blank"><img src={img1} style={styles.button}/></a>
                         <a href="https://www.office.com/launch/powerpoint?ui=en-US&rs=US&auth=1" target="_blank"><img src={img5} style={styles.button}/></a>
-                    </div>
-                    <div>
                         <a href="https://www.onenote.com/hrd?wdorigin=ondcauth2&wdorigin=poc" target="_blank"><img src={img3} style={styles.button}/></a>
                         <a href="https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school//?ctx=teamsGrid" target="_blank"><img src={img4} style={styles.button}/></a>
                     </div>
@@ -36,14 +34,18 @@ const styles ={
             borderColor:"black",
             backgroundColor: "silver",
             color: "black",
-            width: 300,
+            width: "20%",
             textalign: "center", 
             textdecoration: "none",
             display: "inline-block",
             borderRadius: 20,
             borderColor: "black",
+            marginLeft: "10%",
             marginTop: "5%",
-            marginLeft: "9%"
+        },
+        section: {
+            width: "100%",
+            height: "100%",
         },
     };
     export default Microsoft;
