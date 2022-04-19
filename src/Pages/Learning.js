@@ -11,15 +11,15 @@ class Learning extends Component {
                 <div style={styles.background}>
                     <div>
                         <Link to="/Grades"><img src={img1} style={styles.button}/></Link>
-                        <Link to="" style={styles.container}></Link>
+                        <div style={styles.container}></div>
                     </div>
                     <div>
                         <Link to="/Assignments"><img src={img2} style={styles.button}/></Link>
-                        <Link to="" style={styles.container}></Link>
+                        <div style={styles.container}></div>
                     </div>
                     <div>
                         <Link to="/Classes"><img src={img3} style={styles.button}/></Link>
-                        <Link to="" style={styles.container}></Link>
+                        <div style={styles.container}></div>
                     </div>
                 </div> 
             );
@@ -57,7 +57,7 @@ const styles ={
             color: "green",
             paddingTop: "0.5%",
             paddingBottom: "0.5%",
-            width: 500,
+            width: 400,
             textalign: "center", 
             textdecoration: "none",
             display: "inline-block",

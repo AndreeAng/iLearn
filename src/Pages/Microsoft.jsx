@@ -11,10 +11,10 @@ class Microsoft extends Component {
                 <div style={styles.container}>
                     <div style={styles.section}>
                         <a href = "https://www.office.com/launch/word?ui=en-US&rs=US&auth=1" target="_blank"><img src={img2} style={styles.button}/></a>
-                        <a href="https://www.office.com/launch/excel?ui=en-US&rs=US&auth=1" target="_blank"><img src={img1} style={styles.button}/></a>
-                        <a href="https://www.office.com/launch/powerpoint?ui=en-US&rs=US&auth=1" target="_blank"><img src={img5} style={styles.button}/></a>
-                        <a href="https://www.onenote.com/hrd?wdorigin=ondcauth2&wdorigin=poc" target="_blank"><img src={img3} style={styles.button}/></a>
-                        <a href="https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school//?ctx=teamsGrid" target="_blank"><img src={img4} style={styles.button}/></a>
+                        <a href = "https://www.office.com/launch/excel?ui=en-US&rs=US&auth=1" target="_blank"><img src={img1} style={styles.button}/></a>
+                        <a href = "https://www.office.com/launch/powerpoint?ui=en-US&rs=US&auth=1" target="_blank"><img src={img5} style={styles.button}/></a>
+                        <a href = "https://www.onenote.com/hrd?wdorigin=ondcauth2&wdorigin=poc" target="_blank"><img src={img3} style={styles.button}/></a>
+                        <a href = "https://teams.microsoft.com/_?culture=en-us&country=US&lm=deeplink&lmsrc=homePageWeb&cmpid=WebSignIn#/school//?ctx=teamsGrid" target="_blank"><img src={img4} style={styles.button}/></a>
                     </div>
                 </div>
             );
