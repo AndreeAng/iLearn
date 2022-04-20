@@ -41,13 +41,13 @@ const Mailer = () => {
                 onSubmit = {sendEmail}
                 >
                 <label>To:</label>
-                <input type='email' name= 'user_email' className='form-control'/>
+                <input type='email' name= 'user_email' className='form-control' required/>
 
                 <label>Subject:</label>
-                <input type='text' name= 'subject' className='form-control'/>
+                <input type='text' name= 'subject' className='form-control'required/>
 
                 <label>Message:</label>
-                <textarea name= 'message' rows='8' className='form-control'/>
+                <textarea name= 'message' rows='8' className='form-control'required/>
 
                 <input type='submit' 
                 value='Send' 
