@@ -10,14 +10,9 @@ class Archive extends Component {
         return (
             <div style={styles.background}>
                 <div>
-                    <div><img src={img1} style={styles.heading}/></div>
-                    {/* <div><img src={img2} style={styles.heading}/></div> */}
+                    <img src={img1} style={styles.heading}/>
+                    <img src={img2} style={styles.heading}/>
                 </div>
-                <div>
-                    <div style={styles.container}></div>
-                    <div style={styles.container}></div>
-                </div>
-
                 <div>
                     <div style={styles.container}></div>
                     <div style={styles.container}></div>
@@ -35,30 +30,30 @@ const styles ={
         color: "green",
         paddingTop: "8.5%",
         paddingBottom: "0.5%",
-        width: 750,
-        height: 400,
+        width: 700,
+        height: 750,
+        textalign: "right", 
+        textdecoration: "none",
+        display: "inline-block",
+        borderRadius: 20,
+        marginTop: "0%",
+        marginLeft: "7.5%"
+    },
+    heading: {
+        border: 4,
+        borderColor:"black",
+        backgroundColor: "clear",
+        color: "green",
+        paddingTop: "0%",
+        paddingBottom: "0%",
+        width: 700,
+        height: 300,
         textalign: "right", 
         textdecoration: "none",
         display: "inline-block",
         borderRadius: 20,
         marginTop: "1%",
-        marginLeft: "4.5%"
-    },
-    heading: {
-        border: 4,
-        borderColor:"black",
-        backgroundColor: "gray",
-        color: "green",
-        paddingTop: "0%",
-        paddingBottom: "0%",
-        width: 750,
-        height: 200,
-        textalign: "right", 
-        textdecoration: "none",
-        display: "inline-block",
-        borderRadius: 20,
-        marginTop: "2%",
-        marginLeft: "4.5%"
+        marginLeft: "7.5%"
     },
     background: {
         backgroundImage: `url(${image})`,
