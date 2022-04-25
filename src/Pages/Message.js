@@ -7,6 +7,7 @@ function Message(){
     return (
         <div style={styles.background}>
             <Mailer />
+            
         </div>   
     )
 };
