@@ -8,7 +8,10 @@ import Login from '../Pages/Login';
 import Message from '../Pages/Message';
 import Microsoft from '../Pages/Microsoft';
 import Video from '../Pages/Video';
-import logo from "../img/logo.png"
+import logo from "../img/logo.png";
+import Register from "../Pages/Register";
+import Reset from "../Pages/Reset";
+import { Switch } from "antd";
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -20,9 +23,10 @@ const ColoredLine = ({ color }) => (
     />
   );
 function Navbar(){
-    return    <div className='navbar'>
+    return   ( 
+    <div className='navbar'>
     <div className='leftSide'>
-      <Router>
+    <Router>
           <nav style={styles.nav}>   
               <div className='links'>
                 <Link to="/home"><img src={logo} alt="My logo" style={styles.logo}/></Link>
@@ -34,15 +38,16 @@ function Navbar(){
                 {/*<ColoredLine color= "black" /> */}
               </div>
           </nav>
-
           <Routes>
-              <Route path ="/" element={<Login />}/>;
-              <Route path ="/home" element={<Home />} />;
-              <Route path ="/archive" element={<Archive />} />;
-              <Route path ="/learning" element={<Learning />} />;
-              <Route path ="/message" element={<Message/>} />;
-              <Route path ="/microsoft" element={<Microsoft />} />;
-              <Route path ="/video" element={<Video />} />;
+              <Route exact path ="/" element={<Login />}/>;
+              <Route exact path="/register" element={<Register />} />;
+              <Route exact path="/reset" element={<Reset />} />;
+              <Route exact path ="/home" element={<Home />} />;
+              <Route exact path ="/archive" element={<Archive />} />;
+              <Route exact path ="/learning" element={<Learning />} />;
+              <Route exact path ="/message" element={<Message/>} />;
+              <Route exact path ="/microsoft" element={<Microsoft />} />;
+              <Route exact path ="/video" element={<Video />} />;
           </Routes>
       </Router>
     </div>
@@ -51,6 +56,7 @@ function Navbar(){
     </div>
     
   </div>
+    );
 }
 const styles ={
   logo: {

@@ -1,81 +1,51 @@
-import React from 'react'
-import { useRef, useState, useEffect } from 'react';
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-
-const Login = () => {
-    const userRef = useRef();
-    const errRef = useRef();
-
-    const [user, setUser] = useState('');
-    const [pwd, setPwd] = useState('');
-    const [errMsg, setErrMsg] = useState('');
-    const [success, setSuccess] = useState('');
-
-    useEffect(() => {
-        userRef.current.focus();
-    }, [])
-
-    useEffect(() => {
-        setErrMsg('');
-    }, [user, pwd])
-
-    const handleSubmit = async(e) => {
-        e.preventDefault();
-        console.log(user, pwd);
-        setUser('');
-        setPwd('');
-        setSuccess(true);
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth, logInWithEmailAndPassword } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import "./Login.css";
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [user, loading] = useAuthState(auth);
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (loading) {
+      // maybe trigger a loading screen
+      return;
     }
-
-    
+    if (user) navigate("/home");
+  }, [user, loading]);
   return (
-    <>
-        {success ? (
-            <section>
-                <h1>You are logged in!</h1>
-                <br />
-                <p>
-                    <Link to="/home">Home</Link>
-                </p>
-            </section>
-        ) : (
-
-    <section>
-        <p ref={errRef} className={errMsg ? "errmsg" :
-        "offscreen"} aria-live="assertive">{errMsg}</p>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor='username'>Username:</label>
-            <input 
-                type='text' 
-                id='username'
-                ref={userRef}
-                autoComplete='off'
-                onChange={(e) => setUser(e.target.value)}
-                value={user}
-                required
-            />
-            
-            <label htmlFor='password'>Password:</label>
-            <input 
-                type='password' 
-                id='password'
-                onChange={(e) => setPwd(e.target.value)}
-                value={pwd}
-                required
-            />
-            <button>Log In</button>
-        </form>
-        <p>
-            Need an Account?<br />
-            <span className='line'>
-                {/*put router link here*/}
-                <a href='#'>Sign Up</a>
-            </span>
-        </p>
-    </section>
-        )}
-        </>
-  )
+    <div className="login">
+      <div className="login__container">
+        <input
+          type="text"
+          className="login__textBox"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="E-mail Address"
+        />
+        <input
+          type="password"
+          className="login__textBox"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+        />
+        <button
+          className="login__btn"
+          onClick={() => logInWithEmailAndPassword(email, password)}
+        >
+          Login
+        </button>
+        <div>
+          <Link to="/reset">Forgot Password</Link>
+        </div>
+        <div>
+          Don't have an account? <Link to="/register">Register</Link> now.
+        </div>
+      </div>
+    </div>
+  );
 }
-
-export default Login
+export default Login;
