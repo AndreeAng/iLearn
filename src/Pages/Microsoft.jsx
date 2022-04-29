@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import image from "../img/backgi.jpeg";
 import img1 from "../img/excel.png";
 import img2 from "../img/word.png";
 import img3 from "../img/onenote.png";
@@ -22,7 +23,7 @@ class Microsoft extends Component {
     };
 const styles ={
         container: {
-            //backgroundImage: `url(${image})`,
+            backgroundImage: `url(${image})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',

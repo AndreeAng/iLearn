@@ -6,8 +6,7 @@ import image from "../img/backgi.jpeg";
 function Message(){
     return (
         <div style={styles.background}>
-            <Mailer />
-            
+            <Mailer /> 
         </div>   
     )
 };

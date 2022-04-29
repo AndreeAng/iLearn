@@ -12,6 +12,7 @@ import logo from "../img/logo.png";
 import Register from "../Pages/Register";
 import Reset from "../Pages/Reset";
 import { Switch } from "antd";
+import image from "../img/navbg.png";
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -26,10 +27,11 @@ function Navbar(){
     return   ( 
     <div className='navbar'>
     <div className='leftSide'>
+    <div style={styles.background}>
     <Router>
           <nav style={styles.nav}>   
               <div className='links'>
-                <Link to="/home"><img src={logo} alt="My logo" style={styles.logo}/></Link>
+                <Link to="/home"><img src={logo} alt="My logo" style={styles.ilearn}/></Link>
                 <Link to="/archive" style={styles.logo}>Archive</Link>
                 <Link to="/learning" style={styles.logo}>Learning</Link>
                 <Link to="/message" style={styles.logo}>Message</Link>
@@ -54,12 +56,28 @@ function Navbar(){
 
     <div className='rightSide'>
     </div>
-    
+    </div>
   </div>
     );
 }
 const styles ={
-  logo: {
+  background: {
+    backgroundImage: `url(${image})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    width: '100vw',
+    height: '115vh',
+},
+logo: {
+  border: 4,
+  borderColor:"black",
+  borderRadius: 10,
+  backgroundColor: "silver",
+  height: 40,
+  display: "inline-block",
+},
+  ilearn: {
     height: 100,
     display: "inline-block",
   },
