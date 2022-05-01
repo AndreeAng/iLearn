@@ -11,7 +11,8 @@ import {
   collection,
   addDoc,
 } from "firebase/firestore";
-const firebaseConfig = {
+
+export const firebaseConfig = {
   apiKey: "AIzaSyBmuCNOnujpsM47l8TZ9_7hUg8_l72EAZI",
   authDomain: "ilearn-93636.firebaseapp.com",
   projectId: "ilearn-93636",
@@ -22,7 +23,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-
 
 const logInWithEmailAndPassword = async (email, password) => {
   try {
