@@ -17,7 +17,7 @@ class Video extends Component {
                         <a href = "https://meet.google.com/?pli=1" target="_blank"><img src={img3} style={styles.button}/></a>
                     </div>
                  </div>
-                 <div>
+                 <div style={styles.upload}>
                      <Uploader />
                  </div>
             </div> 
@@ -65,7 +65,16 @@ const styles ={
     },
     section: {
         width: "100%",
-        height: "100%",
+        height: "60%",
+    },
+    upload: {
+        width: "50%",
+        marginLeft: "25%",
+        flex: 1,
+        backgroundColor: "silver",
+        paddingLeft: 150,
+        paddingBottom: 100,
+        borderRadius: 30,
     },
 };
 

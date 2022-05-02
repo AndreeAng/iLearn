@@ -1,34 +1,40 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from "react";
 
-class Uploader extends Component {
+export default function Uploader(props) {
+  const { width, height } = props;
 
-  state = {
-    imageUrl: 'https://placeimg.com/320/320/animals' 
-  }
-  
-  handleUploadFile = (event) => {
-    const data = new FormData()
-    data.append('file', event.target.files[0])
-    data.append('name', 'some value user types')
-    data.append('description', 'some value user types')
-    axios.post('/files', data).then((response) => {
-      this.setState({
-        imageUrl: response.data.fileUrl
-      })
-    })
-  }
-    
-  render() {
-    return(
-      <div>
-        <img width='320' src={this.state.imageUrl} />
-        <div>
-          <input type="file" onChange={this.handleUploadFile} />
-        </div>  
-      </div>
-    )
-  }
+  const inputRef = React.useRef();
+
+  const [source, setSource] = React.useState();
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    const url = URL.createObjectURL(file);
+    setSource(url);
+  };
+
+  const handleChoose = (event) => {
+    inputRef.current.click();
+  };
+
+  return (
+    <div>
+      <input
+        ref={inputRef}
+        type="file"
+        onChange={handleFileChange}
+        accept=".mov,.mp4"
+      />
+      {!source && <button onClick={handleChoose}>Choose</button>}
+      {source && (
+        <video
+          width="100%"
+          height={height}
+          controls
+          src={source}
+        />
+      )}
+      <div>{source || "Nothing selected"}</div>
+    </div>
+  );
 }
-
-export default Uploader

@@ -1,24 +1,32 @@
 import emailjs from 'emailjs-com';
-import React, { Component } from "react";
+import React, { Component, useRef, ChangeEvent,FormEvent,useState } from "react";
 import Popup from"./Popup";
-import {useState } from 'react';
+
+const Result =() =>{
+    return(
+        <p> Your message has been successfully sent!</p>
+    )
+}
 
 
 const Mailer = () => {
     const [buttonPopup, setButtonPopup] = useState(false);
+    const [result, showResult] = useState(false);
     function SendEmail(e){
         e.preventDefault();
-        //const [buttonPopup, setButtonePopup] = useState(false);
 
-        emailjs.sendForm(
-            'service_4zxx34d', 
-            'template_gn64g2e',
-            e.target,
-            'o63-1wDhzr9kahLNS'
-            ).then(res=>{
-                console.log(res);
-            }).catch(err=> console.log(err));
+        emailjs.sendForm('service_4zxx34d', 'template_gn64g2e',e.target,'o63-1wDhzr9kahLNS')
+        .then(res=>{
+                console.log(res.text);
+            }).catch(err=> console.log(err.text));
+            e.target.reset();
+            showResult(true);
         }
+
+ //hide result
+ setTimeout(() => {
+    showResult(false);
+ }, 4000);
         
     return(
         <div
@@ -56,10 +64,9 @@ const Mailer = () => {
                 <textarea name= 'message' rows='8' className='form-control'required/>
 
                 <button input type = 'submit' onClick ={() => setButtonPopup(true)}> Send </button>
-                <Popup trigger = {buttonPopup} setTrigger={setButtonPopup}> 
-                <h2> Message Sent </h2>
-                </Popup>
-                
+
+
+                <div classname ="row"> {result ? <Result /> : null}</div>
               
             </form>
         </div>
@@ -68,10 +75,3 @@ const Mailer = () => {
     }
 
 export default Mailer;
-
-
-//<input type='submit' 
-//value='Send' 
-//className='form-control btn-primary'
-//style={{marginTop: '2%'}}
-///>
