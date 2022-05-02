@@ -42,7 +42,9 @@ function Home(){
                 <div>
                     <Link to="/Archive"><img src={img3} style={styles.button}/></Link>
                     <Link to="/Learning"><img src={img4} style={styles.button}/></Link>
-                    <button className="dashboard__btn" onClick={logout}>
+                </div>
+                <div style={{marginLeft: "90%"}}>
+                <button className="dashboard__btn" onClick={logout}>
                             Logout
                     </button>
                 </div>
