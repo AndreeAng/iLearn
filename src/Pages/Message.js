@@ -18,7 +18,7 @@ const styles ={
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100vw',
-        height: '115vh',
+        height: '100vh',
     }
 };
 
