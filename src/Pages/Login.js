@@ -4,6 +4,7 @@ import { auth, logInWithEmailAndPassword } from "../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
 import image from "../img/backgi.jpeg";
+import logo from "../img/logo.png";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,6 +19,9 @@ function Login() {
   }, [user, loading]);
   return (
     <div style={styles.background}>
+      <div style={styles.logo}>
+        <img src={logo} alt="My logo"/>
+      </div>
       <div className="login">
         <div className="login__container">
           <input
@@ -60,6 +64,12 @@ const styles ={
       backgroundRepeat: 'no-repeat',
       width: '100vw',
       height: '115vh',
+  },
+  logo: {
+    width: "25%",
+    height: "20%",
+    background: "white",
+    marginLeft: "37.5%",
   },
 };
 export default Login;
