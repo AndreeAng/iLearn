@@ -12,7 +12,7 @@ import logo from "../img/logo.png";
 import Register from "../Pages/Register";
 import Reset from "../Pages/Reset";
 import { Switch } from "antd";
-//import image from "../img/navbg.png";
+import image from "../img/navbg.png";
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -62,16 +62,15 @@ function Navbar(){
 }
 const styles ={
   background: {
-    //backgroundImage: `url(${image})`,
-    backgroundColor: "white",
-    //backgroundPosition: 'center',
-    //backgroundSize: 'cover',
-    //backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${image})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
     width: '100vw',
-    height: '100vh',
+    height: '115vh',
 },
 logo: {
-  //border: 4,
+  border: 4,
   borderColor:"black",
   borderRadius: 10,
   backgroundColor: "silver",
