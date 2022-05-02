@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import img1 from "../img/teams.png";
 import img2 from "../img/zoom.png";
 import img3 from "../img/googlemeet.png";
+import Uploader from "../components/Uploader";
 
 class Video extends Component {
     render() { 
@@ -15,6 +16,9 @@ class Video extends Component {
                         <a href = "https://zoom.us/join" target="_blank"><img src={img2} style={styles.button}/></a>
                         <a href = "https://meet.google.com/?pli=1" target="_blank"><img src={img3} style={styles.button}/></a>
                     </div>
+                 </div>
+                 <div>
+                     <Uploader />
                  </div>
             </div> 
         );
