@@ -1,6 +1,6 @@
 import { StylesContext } from "@material-ui/styles";
 import React, { useEffect, useState } from "react";
-
+import {BrowserRouter as Router, Routes, Route, Link, BrowserRouter} from "react-router-dom";
 
 import image from "../img/backgi.jpeg";
 import img1 from "../img/grades.png";
@@ -11,7 +11,10 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import * as ImagePicker from 'expo-image-picker';
-import {Link} from "react-router-dom";
+import Grades from "./Grades";
+import Assignments from "./Assignments";
+import Classes from "./Classes";
+import { Switch } from "antd";
 
 export default function Learning() {
   const [image, setImage] = useState("");
@@ -33,16 +36,17 @@ export default function Learning() {
     }
   };
     return (
-    <div style={styles.background}>
-        {/* //<Image></> */}
-        <img src={img1} style={styles.button}/>
-        <img src={img2} style={styles.button}/>
-        <img src={img3} style={styles.button}/>
-        {/*  */}
-        <button onClick={pickImage} style={styles.file}>Choose File</button>
-        <button onClick={uploadImage} style={styles.file}>Upload</button>
-        <div style={styles.container}></div>
-    </div>
+      <div style={styles.background}>
+          {/* //<Image></> */}
+          <Link to="/learning/grades"><img src={img1} style={styles.button}/></Link>
+          <Link to="/learning/assignments"><img src={img2} style={styles.button}/></Link>
+          <Link to="/learning/classes"><img src={img3} style={styles.button}/></Link>
+          {/*  */}
+          
+          <button onClick={pickImage} style={styles.file}>Choose File</button>
+          <button onClick={uploadImage} style={styles.file}>Upload</button>
+          <div style={styles.container}></div>
+      </div>
     );
 };
 

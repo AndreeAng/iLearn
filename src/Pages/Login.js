@@ -68,8 +68,8 @@ const styles ={
   logo: {
     width: "25%",
     height: "20%",
-    background: "white",
     marginLeft: "37.5%",
+    padding: "150px 0px 0px 90px",
   },
 };
 export default Login;
