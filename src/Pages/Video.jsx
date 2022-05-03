@@ -44,7 +44,7 @@ const styles ={
             display: "inline-block",
             borderRadius: 20,
             borderColor: "black",
-            marginLeft: "5%",
+            marginLeft: "6.25%",
             marginTop: "10%",
     },
     container: {

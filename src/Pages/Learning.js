@@ -90,7 +90,7 @@ const styles ={
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       width: '100vw',
-      height: '115vh',
+      height: '100vh',
   },
   container: {
       border: 20,
@@ -98,15 +98,13 @@ const styles ={
   backgroundColor: "gray",
   color: "green",
   paddingTop: "8.5%",
-  paddingBottom: "0.5%",
-  width: 1650,
-  height: 500,
-  textalign: "right", 
+  width: "100%",
+  height: "50%",
+  textalign: "left", 
   textdecoration: "none",
   display: "inline-block",
   borderRadius: 20,
   marginTop: "2.5%",
-  marginLeft: "4.5%"
   },
   button: {
       border: 4,
