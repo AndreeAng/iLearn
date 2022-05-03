@@ -6,6 +6,7 @@ import image from "../img/backgi.jpeg";
 import img1 from "../img/grades.png";
 import img2 from "../img/assignments.png";
 import img3 from "../img/classes.png";
+import img4 from "../img/return.png";
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
@@ -41,10 +42,6 @@ export default function Learning() {
           <Link to="/learning/grades"><img src={img1} style={styles.button}/></Link>
           <Link to="/learning/assignments"><img src={img2} style={styles.button}/></Link>
           <Link to="/learning/classes"><img src={img3} style={styles.button}/></Link>
-          {/*  */}
-          
-          <button onClick={pickImage} style={styles.file}>Choose File</button>
-          <button onClick={uploadImage} style={styles.file}>Upload</button>
           <div style={styles.container}></div>
       </div>
     );
@@ -103,7 +100,7 @@ const styles ={
   color: "green",
   paddingTop: "8.5%",
   width: "100%",
-  height: "50%",
+  height: 600,
   textalign: "left", 
   textdecoration: "none",
   display: "inline-block",
@@ -135,7 +132,23 @@ const styles ={
         display: "inline-block",
         borderRadius: 20,
         borderColor: "black",
-        marginLeft: "15%",
+        marginLeft: "10%",
         marginTop: "3%",
+  },
+  heading: {
+    border: 4,
+    borderColor:"black",
+    backgroundColor: "clear",
+    color: "green",
+    paddingTop: "0%",
+    paddingBottom: "0%",
+    width: 350,
+    height: 150,
+    textalign: "right", 
+    textdecoration: "none",
+    display: "inline-block",
+    borderRadius: 20,
+    marginTop: "0%",
+    marginLeft: "18.5%"
   },
 };
