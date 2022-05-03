@@ -41,7 +41,7 @@ const Mailer = () => {
         }}
          >
             <h1 className='Email'
-             style = {{marginLeft: "0%",marginBottom: "5%",
+             style = {{marginLeft: "30%",marginBottom: "5%",
              color: 'white'}}>Email</h1>
             
             <h1 className='Message'
