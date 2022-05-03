@@ -43,7 +43,7 @@ function Home(){
                     <Link to="/Archive"><img src={img3} style={styles.button}/></Link>
                     <Link to="/Learning"><img src={img4} style={styles.button}/></Link>
                 </div>
-                <div style={{marginLeft: "90%"}}>
+                <div style={{marginLeft: "80%"}}>
                 <button className="dashboard__btn" onClick={logout}>
                             Logout
                     </button>
@@ -66,7 +66,7 @@ const styles ={
         borderColor:"black",
         backgroundColor: "white",
         color: "black",
-        width: 300,
+        width: "20%",
         textalign: "center", 
         textdecoration: "none",
         display: "inline-block",

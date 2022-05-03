@@ -41,17 +41,17 @@ const Mailer = () => {
         }}
          >
             <h1 className='Email'
-             style = {{marginLeft: "12.5%",marginBottom: "5%",
+             style = {{marginLeft: "0%",marginBottom: "5%",
              color: 'white'}}>Email</h1>
             
             <h1 className='Message'
-             style = {{marginLeft: "12.5%",
+             style = {{marginLeft: "10%",
              color: 'white'}}>
              New Message </h1>
 
              <form 
                 className='row' 
-                style={{marginLeft: "12.5%", width: "75%", color: 'White'}}
+                style={{marginLeft: "5%", width: "72%", color: 'White', padding:'0px 100px 400px 0px'}}
                 onSubmit = {SendEmail}
                 >
                 <label>To:</label>
