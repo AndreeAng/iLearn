@@ -1,7 +1,6 @@
 import { StylesContext } from "@material-ui/styles";
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-import { StyleSheet, View } from "react-native";
+
 
 import image from "../img/backgi.jpeg";
 import img1 from "../img/grades.png";
@@ -11,7 +10,8 @@ import img3 from "../img/classes.png";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
-import * as ImagePicker from 'expo-image-picker'
+import * as ImagePicker from 'expo-image-picker';
+import {Link} from "react-router-dom";
 
 export default function Learning() {
   const [image, setImage] = useState("");
