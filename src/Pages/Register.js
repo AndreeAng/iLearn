@@ -6,6 +6,8 @@ import {
   registerWithEmailAndPassword,
 } from "../firebase";
 import "./Register.css";
+import image from "../img/backgi.jpeg";
+
 function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,6 +23,7 @@ function Register() {
     if (user) history("/home");
   }, [user, loading]);
   return (
+    <div style={styles.background}>
     <div className="register">
       <div className="register__container">
         <input
@@ -52,6 +55,18 @@ function Register() {
         </div>
       </div>
     </div>
+    </div>
   );
 }
+
+const styles ={
+  background: {
+      backgroundImage: `url(${image})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      width: '100vw',
+      height: '115vh',
+  },
+};
 export default Register;

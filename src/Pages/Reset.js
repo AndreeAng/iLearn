@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { auth, sendPasswordReset } from "../firebase";
 import "./Reset.css";
+import image from "../img/backgi.jpeg";
+
 function Reset() {
   const [email, setEmail] = useState("");
   const [user, loading, error] = useAuthState(auth);
@@ -13,6 +15,7 @@ function Reset() {
     if (user) navigate("/home");
   }, [user, loading]);
   return (
+    <div style={styles.background}>
     <div className="reset">
       <div className="reset__container">
         <input
@@ -33,6 +36,19 @@ function Reset() {
         </div>
       </div>
     </div>
+    </div>
   );
 }
+
+const styles ={
+  background: {
+      backgroundImage: `url(${image})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+      width: '100vw',
+      height: '115vh',
+  },
+};
+
 export default Reset;

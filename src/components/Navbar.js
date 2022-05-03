@@ -13,6 +13,9 @@ import Register from "../Pages/Register";
 import Reset from "../Pages/Reset";
 import { Switch } from "antd";
 import image from "../img/navbg.png";
+import Classes from "../Pages/Classes";
+import Assignments from "../Pages/Assignments";
+import Grades from "../Pages/Grades";
 
 const ColoredLine = ({ color }) => (
     <hr
@@ -50,6 +53,9 @@ function Navbar(){
               <Route exact path ="/message" element={<Message/>} />;
               <Route exact path ="/microsoft" element={<Microsoft />} />;
               <Route exact path ="/video" element={<Video />} />;
+              <Route exact path ="/learning/grades" element={<Grades />} />;
+              <Route exact path ="/learning/classes" element={<Classes />} />;
+              <Route exact path ="/learning/assignments" element={<Assignments />} />;
           </Routes>
       </Router>
     </div>
